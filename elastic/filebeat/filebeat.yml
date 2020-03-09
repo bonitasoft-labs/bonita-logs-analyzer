@@ -1,0 +1,11 @@
+filebeat.inputs:
+- type: log
+  paths: /var/log/bonita/**/*.log
+  multiline.pattern: '^202'
+  multiline.negate: true
+  multiline.match: after
+
+output.logstash:
+  hosts: ["logstash"]
+
+ssl.verification_mode: none
