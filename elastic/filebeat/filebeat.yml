@@ -1,9 +1,22 @@
 filebeat.inputs:
 - type: log
-  paths: /var/log/bonita/**/*.log
+  paths: /var/log/bonita/**/bonita-monitoring.*.log
   multiline.pattern: '^202'
   multiline.negate: true
   multiline.match: after
+  tags: ["monitoring-log"]
+- type: log
+  paths: /var/log/bonita/**/catalina.*.log
+  multiline.pattern: '^202'
+  multiline.negate: true
+  multiline.match: after
+  tags: ["catalina-log"]
+- type: log
+  paths: /var/log/bonita/**/bonita.*.log
+  multiline.pattern: '^202'
+  multiline.negate: true
+  multiline.match: after
+  tags: ["bonita-log"]
 
 output.logstash:
   hosts: ["logstash"]

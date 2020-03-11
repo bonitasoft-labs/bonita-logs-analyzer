@@ -1,5 +1,10 @@
 cluster.name: ${cluster.name}
 node.data : true
 network.host : 0.0.0.0
-discovery.seed_hosts : []
-cluster.initial_master_nodes : []
+
+# for elastic 6.x
+discovery.zen.minimum_master_nodes: 1
+
+# for elastic 7+
+#discovery.seed_hosts : []
+#cluster.initial_master_nodes : []

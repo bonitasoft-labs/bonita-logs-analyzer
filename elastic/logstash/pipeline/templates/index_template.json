@@ -1,0 +1,28 @@
+{
+  "index_patterns": ["log-monitoring*"],
+  "settings": {
+    "number_of_shards": 1
+  },
+  "mappings": {
+    "doc": {
+      "properties": {
+        "conectors_executed": { "type": "integer" },
+        "conectors_pending": { "type": "integer" },
+        "conectors_running": { "type": "integer" },
+        "message_executed": { "type": "integer" },
+        "message_potential": { "type": "integer" },
+        "message_task_retrigger": { "type": "integer" },
+        "works_executed": { "type": "integer" },
+        "works_pending": { "type": "integer" },
+        "works_retried": { "type": "integer" },
+        "works_running": { "type": "integer" }
+      }
+    }
+  }
+}
+
+
+
+          
+        
+      
