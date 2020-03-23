@@ -27,7 +27,7 @@ Once started, configure Kibana indexes.
 
 Will produce something like following
 
-![graph of connectors and works running](doc/connectors_and_works_running.png)
+![graph of connectors and works running](doc/connector_and_works_running.png)
 
 
 Other queries
